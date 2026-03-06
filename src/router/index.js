@@ -6,7 +6,7 @@ const routes = [
     path: '/',
     name: 'Home',
     component: () => import('@/views/Home.vue'),
-    meta: { title: '首页', requiresAuth: false }  // 首页可公开访问
+    meta: { title: '首页', requiresAuth: false }
   },
   {
     path: '/login',
@@ -38,19 +38,6 @@ const routes = [
     component: () => import('@/views/game/Room.vue'),
     meta: { title: '游戏房间', requiresAuth: true }
   },
-  {
-    path: '/about',
-    name: 'About',
-    component: () => import('@/views/About.vue'),
-    meta: { title: '关于', requiresAuth: false }
-  },
-  {
-    path: '/:pathMatch(.*)*',
-    name: 'NotFound',
-    component: () => import('@/views/NotFound.vue'),
-    meta: { title: '404' }
-  }
-]
   {
     path: '/about',
     name: 'About',
