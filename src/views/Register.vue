@@ -49,7 +49,7 @@
             <input 
               v-model="formData.password"
               type="password" 
-              placeholder="请输入密码"
+              placeholder="请输入密码（至少 6 位）"
               class="w-full px-4 py-3 bg-white/5 border border-white/20 rounded-xl text-white placeholder-red-300 focus:outline-none focus:border-yellow-400 transition-colors"
             />
           </div>
@@ -74,7 +74,7 @@
           <button
             type="submit"
             :disabled="loading"
-            class="w-full py-4 bg-gradient-to-r from-yellow-400 to-yellow-500 text-red-900 font-bold rounded-xl hover:from-yellow-300 hover:to-yellow-400 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+            class="w-full py-4 bg-gradient-to-r from-yellow-400 to-yellow-500 text-red-900 font-bold rounded-xl hover:from-yellow-300 hover:to-yellow-400 transition-all disabled:opacity-50 disabled:cursor-not-allowed shadow-lg"
           >
             <span v-if="loading" class="flex items-center justify-center space-x-2">
               <svg class="animate-spin h-5 w-5" viewBox="0 0 24 24">
