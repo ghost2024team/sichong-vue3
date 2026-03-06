@@ -4,15 +4,19 @@ import { useAuthStore } from '@/store/auth'
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: () => import('@/views/Home.vue'),
-    meta: { title: '首页', requiresAuth: false }
+    redirect: '/login'  // 默认重定向到登录页
   },
   {
     path: '/login',
     name: 'Login',
     component: () => import('@/views/Login.vue'),
     meta: { title: '登录', requiresAuth: false }
+  },
+  {
+    path: '/home',
+    name: 'Home',
+    component: () => import('@/views/Home.vue'),
+    meta: { title: '首页', requiresAuth: true }  // 首页需要认证
   },
   {
     path: '/about',
