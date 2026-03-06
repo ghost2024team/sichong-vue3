@@ -1,0 +1,52 @@
+# 详见 https://github.com/github/gitignore/blob/main/Node.gitignore
+
+# 依赖文件
+node_modules/
+/.pnp
+.pnp.js
+
+# 测试文件
+/coverage
+
+# 生产构建文件
+/dist
+/build
+
+# 日志文件
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# 编辑器文件和目录
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# 环境变量
+.env
+.env.local
+.env.*.local
+
+# 临时文件
+*.tmp
+*.temp
+.cache
+
+# WindiCSS 临时文件
+.windi/
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
+
+# 其他
+.vercel
