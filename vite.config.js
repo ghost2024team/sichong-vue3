@@ -9,6 +9,7 @@ export default defineConfig({
     vue(),
     WindiCSS()
   ],
+  base: '/sichong-vue3/',
   resolve: {
     alias: {
       '@': resolve(__dirname, 'src')
