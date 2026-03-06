@@ -4,7 +4,9 @@ import { useAuthStore } from '@/store/auth'
 const routes = [
   {
     path: '/',
-    redirect: '/login'  // 默认重定向到登录页
+    name: 'Home',
+    component: () => import('@/views/Home.vue'),
+    meta: { title: '首页', requiresAuth: false }  // 首页可公开访问
   },
   {
     path: '/login',
@@ -13,11 +15,42 @@ const routes = [
     meta: { title: '登录', requiresAuth: false }
   },
   {
-    path: '/home',
-    name: 'Home',
-    component: () => import('@/views/Home.vue'),
-    meta: { title: '首页', requiresAuth: true }  // 首页需要认证
+    path: '/register',
+    name: 'Register',
+    component: () => import('@/views/Register.vue'),
+    meta: { title: '注册', requiresAuth: false }
   },
+  {
+    path: '/game/rooms',
+    name: 'GameRooms',
+    component: () => import('@/views/game/Rooms.vue'),
+    meta: { title: '游戏房间', requiresAuth: false }
+  },
+  {
+    path: '/game/create',
+    name: 'CreateRoom',
+    component: () => import('@/views/game/CreateRoom.vue'),
+    meta: { title: '创建房间', requiresAuth: true }
+  },
+  {
+    path: '/game/room/:id',
+    name: 'GameRoom',
+    component: () => import('@/views/game/Room.vue'),
+    meta: { title: '游戏房间', requiresAuth: true }
+  },
+  {
+    path: '/about',
+    name: 'About',
+    component: () => import('@/views/About.vue'),
+    meta: { title: '关于', requiresAuth: false }
+  },
+  {
+    path: '/:pathMatch(.*)*',
+    name: 'NotFound',
+    component: () => import('@/views/NotFound.vue'),
+    meta: { title: '404' }
+  }
+]
   {
     path: '/about',
     name: 'About',
