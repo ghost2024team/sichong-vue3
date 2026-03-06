@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="refresh" content="0;url=/sichong-vue3/">
+  <title>四冲扑克 - 加载中</title>
+  <script>
+    // SPA 路由重定向
+    var path = window.location.pathname;
+    var baseUrl = '/sichong-vue3/';
+    if (path !== baseUrl && !path.endsWith('404.html')) {
+      window.location.href = baseUrl + path.replace(/\/+/g, '/');
+    } else {
+      window.location.href = baseUrl;
+    }
+  </script>
+</head>
+<body>
+  <div style="text-align:center;padding:50px;">
+    <h1>🃏 四冲扑克</h1>
+    <p>加载中...</p>
+  </div>
+</body>
+</html>
